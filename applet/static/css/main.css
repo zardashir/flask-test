@@ -3,7 +3,7 @@
 .arc:hover::after{content: url('{{ url_for('static', filename='img/archiv.png') }}')} 
 
 body{
-	background-color: green;
+	background-color: gold;
 	font-family: "Roboto";
 	font-size: 30px;
 	color: #555;
