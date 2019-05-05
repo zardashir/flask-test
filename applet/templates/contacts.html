@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="spacer"></div>
+<div class="spacer"></div>
+<div class="container-fluid">
+  <h3 class= "centered">Contacts - feel free to mail, chating and contribute!</h3>
+  <div class="spacer"></div>
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-2 centr"><img src="{{ url_for('static', filename='img/telegram.png') }}" alt="Telegram" height="80px"></div>
+  <div class="col-sm-3"><a href="http://telegram.me/mintmaster" class="marker2">@mintmaster</a></div>
+  <div class="col-sm-4"></div>
+</div> 
+<hr> <br>
+
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-2 centr"><img src="{{ url_for('static', filename='img/mail.png') }}" alt="Gmail" height="80px"></div>
+  <div class="col-sm-3"><a href="mailto:ubermint1337@gmail.com" class="marker2">ubermint1337@gmail.com</a></div>
+  <div class="col-sm-4"></div>
+</div> 
+<hr> <br>
+
+
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-2 centr"><img src="{{ url_for('static', filename='img/github.png') }}" alt="GitHub" height="96px"></div>
+  <div class="col-sm-3"><a href="https://github.com/M1neskA" class="marker2">M1neskA</a></div>
+  <div class="col-sm-4"></div>
+</div> 
+</div>
+{% endblock %}

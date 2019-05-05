@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+  
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+<div class="jumbotron-fluid text-center  main">
+  <h1></h1>
+  <p>Micropic is an elegant, easy-to-use image reduce tool.</p>
+  </div>
+
+
+<div class="spacer"></div>
+<div class="container-fluid">
+ <div class="row">
+
+  <div class="col-sm-6">
+    <h2 class = "centered">Micropic</h2>
+    <p class = "articl">
+    A flexible tool for resizing your images,<br> you can now quickly and easily make thumbnails,<br> icons, tiny pictures - and use them for your own.<br>Actually, the script was invented and<br> fully developed by <b>Vadym Tiepov</b> <a href="/contacts" class="marker2">[->]</a><br>
+    For additional information - visit <a href="/about" class="marker2">about</a>.</p>
+  </div>
+    <div class="col-sm-6">
+  {% if archive %}
+  <h2 class = "centered">Download picture.</h2>
+  
+ <p class="articl">Now you can download the resized photo, just press on:</p>
+  <a href='{{ archive }}' download>
+    <h3 class="centered arc">(download)</h3>
+  </a>
+  Also, maybe you want to make another compression? <a href="/index">Just repeat!</a>
+  {% else %}
+  <h2 class = "centered">Upload files.</h2>
+  <p class="articl">So, just input a correct url path to image, and our script will resize it.</p>
+    <form class="centered" method="POST" action="/">
+      {{ form.hidden_tag() }}
+      {{ form.url.label }} {{ form.url(size=40) }}
+      <input type="submit" value="Go">
+    </form>
+  {% endif %}
+  {% if exception %}<p style="color: red;">please, input a valid url!</p>{% else %}{% endif %}
+  </div>
+</div>
+</div>
+
+
+
+{% endblock %}
+
